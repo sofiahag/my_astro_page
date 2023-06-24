@@ -1,8 +1,8 @@
 const CONFIG = {
   name: 'Sofia Haglund',
 
-  origin: 'https://astrowind.vercel.app', //'https://example.com'
-  basePathname: '/', // Change this if you need to deploy to Github Pages, for example
+  origin: 'my-astro-page-1zf8-pfl67qjlk-sofiahag.vercel.app', //'https://example.com'
+  basePathname: '/my_astro_page', // Change this if you need to deploy to Github Pages, for example
   trailingSlash: false, // Generate permalinks with or without "/" at the end
 
   title: 'Welcome!',
@@ -22,7 +22,7 @@ const CONFIG = {
   }),
 
   googleAnalyticsId: false, // or "G-XXXXXXXXXX",
-  googleSiteVerificationId: 'orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M', //false Or some value,
+  googleSiteVerificationId: false, //false Or some value,
 
   blog: {
     disabled: false,
