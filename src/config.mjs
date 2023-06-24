@@ -1,16 +1,13 @@
-import defaultImage from './assets/images/default.png';
-
 const CONFIG = {
-  name: 'AstroWind',
+  name: 'Sofia Haglund',
 
-  origin: 'https://astrowind.vercel.app',
-  basePathname: '/',
-  trailingSlash: false,
+  origin: 'https://astrowind.vercel.app', //'https://example.com'
+  basePathname: '/', // Change this if you need to deploy to Github Pages, for example
+  trailingSlash: false, // Generate permalinks with or without "/" at the end
 
-  title: 'AstroWind — Free template for create a website with Astro + Tailwind CSS',
-  description:
-    '🚀 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs.',
-  defaultImage: defaultImage,
+  title: 'Welcome!',
+/*   description:
+    '🚀 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs.', */
 
   defaultTheme: 'system', // Values: "system" | "light" | "dark" | "light:only" | "dark:only"
 
@@ -25,7 +22,7 @@ const CONFIG = {
   }),
 
   googleAnalyticsId: false, // or "G-XXXXXXXXXX",
-  googleSiteVerificationId: 'orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M',
+  googleSiteVerificationId: 'orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M', //false Or some value,
 
   blog: {
     disabled: false,

@@ -7,6 +7,8 @@ import BasicScripts from '~/components/common/BasicScripts.astro';
 import { MetaSEO } from '~/types';
 import { SITE } from '~/config.mjs';
 
+import '@fontsource/bubblegum-sans';
+
 export interface Props {
   meta?: MetaSEO;
 }
@@ -21,7 +23,7 @@ const { language = 'en', textDirection = 'ltr' } = SITE;
     <MetaTags {...meta} />
   </head>
 
-  <body class="antialiased text-page bg-light dark:text-slate-300 tracking-tight dark:bg-dark">
+  <body class="antialiased text-page bg-white dark:bg-black tracking-tight dark:text-slate-300 dark:from-black dark:to-slate-600">
     <slot />
     <BasicScripts />
     <style is:global>

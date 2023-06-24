@@ -1,5 +1,4 @@
 ---
-import { Icon } from 'astro-icon';
 import { Picture } from '@astrojs/image/components';
 
 interface CallToAction {
@@ -19,9 +18,6 @@ export interface Props {
 const {
   title = await Astro.slots.render('title'),
   subtitle = await Astro.slots.render('subtitle'),
-  content = await Astro.slots.render('content'),
-  callToAction = await Astro.slots.render('callToAction'),
-  callToAction2 = await Astro.slots.render('callToAction2'),
   image = await Astro.slots.render('image'),
 } = Astro.props;
 ---
@@ -31,59 +27,8 @@ const {
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
     <div class="pt-0 md:pt-[76px] pointer-events-none"></div>
     <div class="py-12 md:py-20">
-      <div class="text-center pb-10 md:pb-16 max-w-screen-lg mx-auto">
-        {
-          title && (
-            <h1
-              class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200"
-              set:html={title}
-            />
-          )
-        }
-        <div class="max-w-3xl mx-auto">
-          {subtitle && <p class="text-xl text-muted mb-6 dark:text-slate-300" set:html={subtitle} />}
-          <div class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4">
-            {
-              callToAction && (
-                <div class="flex w-full sm:w-auto">
-                  {typeof callToAction === 'string' ? (
-                    <Fragment set:html={callToAction} />
-                  ) : (
-                    <a class="btn btn-primary sm:mb-0 w-full" href={callToAction?.href} target="_blank" rel="noopener">
-                      {callToAction?.icon && (
-                        <>
-                          <Icon name={callToAction.icon} class="w-5 h-5 mr-1 -ml-1.5" />&nbsp;
-                        </>
-                      )}
-                      {callToAction?.text}
-                    </a>
-                  )}
-                </div>
-              )
-            }
-            {
-              callToAction2 && (
-                <div class="flex w-full sm:w-auto">
-                  {typeof callToAction2 === 'string' ? (
-                    <Fragment set:html={callToAction2} />
-                  ) : (
-                    <a class="btn w-full" href={callToAction2?.href}>
-                      {callToAction2?.icon && (
-                        <>
-                          <Icon name={callToAction2.icon} class="w-5 h-5 mr-1 -ml-1.5" />&nbsp;
-                        </>
-                      )}
-                      {callToAction2.text}
-                    </a>
-                  )}
-                </div>
-              )
-            }
-          </div>
-        </div>
-        {content && <Fragment set:html={content} />}
-      </div>
-      <div>
+      <div class="text-center max-w-screen-lg mx-auto">
+        <div class="pb-5 md:pb-10">
         {
           image && (
             <div class="relative m-auto max-w-5xl">
@@ -91,19 +36,36 @@ const {
                 <Fragment set:html={image} />
               ) : (
                 <Picture
-                  class="mx-auto rounded-md w-full"
+                  class="mx-auto rounded-full"
                   widths={[400, 768, 1024, 2040]}
                   sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
-                  aspectRatio={1024 / 576}
+                  aspectRatio={200 / 200}
                   loading="eager"
-                  width={1024}
-                  height={576}
+                  width={200}
+                  height={200}
                   {...image}
                 />
               )}
             </div>
           )
         }
+      </div>
+      <div class="text-center pt-5 max-w-screen-lg mx-auto">
+        {
+          title && (
+            <h1
+              class="text-6xl md:text-7xl h-[4rem] md:h-[10rem] lg:h-[5rem] font-bold font-bubblegum 
+                bg-gradient-to-r from-pink-400 via-indigo-400 to-purple-400 inline-block text-transparent 
+                bg-clip-text font-outline-2 hover:from-indigo-400 hover:via-purple-400 hover:to-pink-400
+                dark:from-pink-500 dark:via-purple-500 dark:to-blue-500 dark:hover:from-blue-500
+                dark:hover:via-purple-500 dark:hover:to-pink-500"
+              set:html={title}
+            />
+          )
+        }
+        <div class="max-w-3xl mx-auto">
+          {subtitle && <p class="text-xl text-muted mb-6 dark:text-slate-300" set:html={subtitle} />}
+        </div>
       </div>
     </div>
   </div>

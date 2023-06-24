@@ -10,9 +10,10 @@ module.exports = {
         accent: 'var(--aw-color-accent)',
       },
       fontFamily: {
-        sans: ['var(--aw-font-sans)', ...defaultTheme.fontFamily.sans],
+        sans: ['Sofia Pro'],
         serif: ['var(--aw-font-serif)', ...defaultTheme.fontFamily.serif],
         heading: ['var(--aw-font-heading)', ...defaultTheme.fontFamily.sans],
+        bubblegum: ['Bubblegum Sans']
       },
     },
   },
