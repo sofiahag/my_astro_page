@@ -1,8 +1,8 @@
 const CONFIG = {
   name: 'Sofia Haglund',
 
-  origin: 'my-astro-page-1zf8-pfl67qjlk-sofiahag.vercel.app', //'https://example.com'
-  basePathname: '/my_astro_page', // Change this if you need to deploy to Github Pages, for example
+  origin: 'https://my-page-astro.vercel.app', //'https://example.com'
+  basePathname: '/my-astro-page', // Change this if you need to deploy to Github Pages, for example
   trailingSlash: false, // Generate permalinks with or without "/" at the end
 
   title: 'Welcome!',
@@ -23,37 +23,7 @@ const CONFIG = {
 
   googleAnalyticsId: false, // or "G-XXXXXXXXXX",
   googleSiteVerificationId: false, //false Or some value,
-
-  blog: {
-    disabled: false,
-    postsPerPage: 4,
-
-    post: {
-      permalink: '/%slug%', // Variables: %slug%, %year%, %month%, %day%, %hour%, %minute%, %second%, %category%
-      noindex: false,
-      disabled: false,
-    },
-
-    list: {
-      pathname: 'blog', // Blog main path, you can change this to "articles" (/articles)
-      noindex: false,
-      disabled: false,
-    },
-
-    category: {
-      pathname: 'category', // Category main path /category/some-category
-      noindex: true,
-      disabled: false,
-    },
-
-    tag: {
-      pathname: 'tag', // Tag main path /tag/some-tag
-      noindex: true,
-      disabled: false,
-    },
-  },
 };
 
-export const SITE = { ...CONFIG, blog: undefined };
-export const BLOG = CONFIG.blog;
+export const SITE = { ...CONFIG };
 export const DATE_FORMATTER = CONFIG.dateFormatter;
