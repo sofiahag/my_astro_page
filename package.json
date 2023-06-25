@@ -50,6 +50,8 @@
     "@fontsource/bubblegum-sans": "^5.0.3",
     "emailjs": "^4.0.2",
     "next": "^13.4.7",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "typed.js": "^2.0.16",
     "vue": "^3.3.4"
   }
