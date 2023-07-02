@@ -3,7 +3,8 @@
   "trailingSlash": false,
   "headers": [
     {
-      "source": "/_astro/(.*)",
+      "source": "/(.*)",
+      "destination": "/index.html",
       "headers": [
         {
           "key": "Cache-Control",
