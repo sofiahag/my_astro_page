@@ -4,7 +4,6 @@
   "headers": [
     {
       "source": "/_astro/(.*)",
-      "destination": "/index.html",
       "headers": [
         {
           "key": "Cache-Control",
