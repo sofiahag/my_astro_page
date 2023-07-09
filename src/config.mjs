@@ -1,8 +1,8 @@
 const CONFIG = {
   name: 'Sofia Haglund',
 
-  origin: 'https://my-astro-page.vercel.app', //'https://example.com'
-  basePathname: '/my_astro_page', // Change this if you need to deploy to Github Pages, for example
+  origin: 'https://my-astro-page-t26f-7r7ju53hc-sofiahag.vercel.app', //'https://example.com'
+  basePathname: '/', // Change this if you need to deploy to Github Pages, for example
   trailingSlash: false, // Generate permalinks with or without "/" at the end
 
   title: 'Welcome!',
