@@ -20,6 +20,14 @@ const { language = 'en', textDirection = 'ltr' } = SITE;
 <!DOCTYPE html>
 <html lang={language} dir={textDirection} class="2xl:text-[20px]">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7YKMWLRCBW"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-7YKMWLRCBW');
+    </script>   
     <MetaTags {...meta} />
   </head>
 
