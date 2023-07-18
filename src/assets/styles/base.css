@@ -303,10 +303,6 @@
   }
 }
 
-.loading {
-  background: transparent url('./src/assets/images/pink-atom-loader.gif') no-repeat scroll center center;
-}
-
 @media (max-width: 767px) {
   .base {
     display: none;
