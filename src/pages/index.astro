@@ -3,7 +3,6 @@ import { SITE } from '~/config.mjs';
 import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
-import DNA from '~/components/widgets/DNA.html';
 import Me from '~/components/widgets/Me.astro';
 import Skills from '~/components/widgets/Skills.astro';
 import ContactMe from '~/components/widgets/ContactMe.vue';
@@ -16,13 +15,9 @@ const meta = {
 ---
 
 <Layout {meta}>
-
   <!-- Hero Widget ******************* -->
-
-  <div class="md:grid md:grid-cols-3">
-    <section class="py-12 md:py-20">
-      <DNA/>
-    </section>
+  <canvas id="canvas"></canvas>
+    <div>
       <Hero
         image={{
           src: import('~/assets/images/IMG_0572.webp'),
@@ -37,10 +32,7 @@ const meta = {
       </Fragment>
       <!-- Todo <Typed client:load />  -->
       </Hero>
-    <section class="py-12 md:py-20">
-      <DNA/>
-    </section>
-  </div>
+    </div>
 
   <!-- Me Widget ************** -->
 
@@ -130,3 +122,5 @@ const meta = {
   <ContactMe client:load />
 
 </Layout>
+
+<script src="~/FireFlies.js"></script>

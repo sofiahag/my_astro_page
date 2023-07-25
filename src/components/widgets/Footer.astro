@@ -32,7 +32,7 @@ const { personalIcons = [], theme = 'light' } = Astro.props;
     <div class="py-8 md:py-12">
       <div class="col-span-12 lg:col-span-4">
         <div class="flex items-center justify-between md:py-4">
-          <a class="inline-block font-bold text-base uppercase" href={getHomePermalink()}>Created by: <span class="text-xl normal-case">{SITE?.name}</span></a>
+          <a class="inline-block font-bold text-sm uppercase" href={getHomePermalink()}>Created by: <span class="text-sm normal-case">{SITE?.name}</span></a>
           {
             personalIcons?.length ? (
               <ul class="flex">
