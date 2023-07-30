@@ -3,7 +3,7 @@
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="pt-20 md:py-12 md:pt-20 md:pb-10">
         <div class="max-w-3xl mx-auto bg-blue-200 dark:bg-indigo-700 text-center p-6 rounded-md shadow-xl dark:shadow-none dark:border dark:border-slate-600">
-          <h2 class="text-4xl md:text-4xl font-bold leading-tighter tracking-tighter mb-12 font-heading dark:text-white">Contact me!</h2>
+          <h2 class="text-4xl md:text-4xl font-bold leading-tighter tracking-tighter mb-12 font-heading dark:text-white">Send me a message!</h2>
           <form ref="form" @submit.prevent="sendEmail">
             <div class="grid grid-cols-2 gap-4">
               <div>
