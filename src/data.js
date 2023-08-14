@@ -1,6 +1,18 @@
 export const headerData = {
   links: [
     {
+      text: 'Projects',
+        links: [
+          {
+            text: 'React Weather App',
+            href: 'https://sofiahag-react-weather-app.netlify.app'
+          },
+          {
+            text: 'More to come!'
+          }
+        ]
+      },
+    {
       text: 'LinkedIn',
       href: 'https://www.linkedin.com/in/sofia-haglund-6939a8160/',
       icon: 'mdi:linkedin'
@@ -19,8 +31,8 @@ export const headerData = {
       text: 'YouTube',
       href: 'https://www.youtube.com/channel/UCkOM8G7wEJKloyYT6sIo63w',
       icon: 'mdi:youtube'
-    },
-  ],
+    }
+  ]
 };
   
 export const footerData = {
