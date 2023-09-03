@@ -7096,6 +7096,14 @@ react-sky@^1.1.0:
   dependencies:
     webpack-dev-server "^3.1.10"
 
+react-typed@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.npmjs.org/react-typed/-/react-typed-1.2.0.tgz#c5fb0bea4c972545c29fceb9c1d22495b6636b58"
+  integrity sha512-aDsaA6zkjAFJs8285APOqE85l/kwJ0/ZJmBhARwUrza4TTttrMM5FcMCGEDdThdfUdHo/0l9WXmxp1m2ik4qdw==
+  dependencies:
+    prop-types "^15.6.0"
+    typed.js "^2.0.6"
+
 react-wavify@^1.8.3:
   version "1.8.3"
   resolved "https://registry.npmjs.org/react-wavify/-/react-wavify-1.8.3.tgz#5e78862920ff4205a5564bbc5a29cfd186b10b1d"
@@ -8511,7 +8519,7 @@ typed-array-length@^1.0.4:
     for-each "^0.3.3"
     is-typed-array "^1.1.9"
 
-typed.js@^2.0.16:
+typed.js@^2.0.16, typed.js@^2.0.6:
   version "2.0.16"
   resolved "https://registry.npmjs.org/typed.js/-/typed.js-2.0.16.tgz#2ba416821ec8a59521466f405784077eddb1d95e"
   integrity sha512-IBB52GlJiTUOnomwdVVf7lWgC6gScn8md+26zTHj5oJWA+4pSuclHE76rbGI2hnyO+NT+QXdIUHbfjAY5nEtcw==
