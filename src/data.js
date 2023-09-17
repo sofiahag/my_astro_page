@@ -8,6 +8,10 @@ export const headerData = {
             href: 'https://sofiahag-react-weather-app.netlify.app'
           },
           {
+            text: 'Memory App',
+            href: 'https://sofiahag-memory.netlify.app'
+          },
+          {
             text: 'More to come!'
           }
         ]
