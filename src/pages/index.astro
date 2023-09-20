@@ -6,7 +6,7 @@ import Hero from '~/components/widgets/Hero.astro';
 import Me from '~/components/widgets/Me.astro';
 import Skills from '~/components/widgets/Skills.astro';
 import ContactMe from '~/components/widgets/ContactMe.vue';
-// import Typed from '~/components/widgets/Typed.vue';
+
 
 const meta = {
   title: SITE.title,
@@ -28,9 +28,8 @@ const meta = {
         <span>Sofia Haglund</span>
       </Fragment>
       <Fragment slot="subtitle">
-        <span>Bioinformatician/System Developer</span>
+        <span id="typing"></span>
       </Fragment>
-      <!-- Todo <Typed client:load />  -->
       </Hero>
     </div>
 
@@ -129,3 +128,4 @@ const meta = {
 </Layout>
 
 <script src="~/FireFlies.js"></script>
+<script src="~/Typewriter.js"></script>
