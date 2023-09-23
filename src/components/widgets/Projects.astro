@@ -1,0 +1,61 @@
+---
+
+export interface Props {
+  title?: string;
+  subtitle?: string;
+  highlight?: string;
+}
+
+const {
+  title = await Astro.slots.render('title'),
+  subtitle = await Astro.slots.render('subtitle'),
+  highlight
+} = Astro.props;
+---
+
+<section class="relative">
+  <div class="absolute inset-0 bg-gradient-to-b from-white via-sky-100 to-fuchsia-100 dark:from-blue-800
+     dark:to-fuchsia-600" aria-hidden="true"></div>
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:w-8/12">
+    <div class="py-4 pt-8 sm:py-6 lg:py-8 lg:pt-12">
+      {
+        (title || subtitle || highlight) && (
+          <div class="mb-8 md:mx-auto text-center max-w-3xl">
+            {highlight && (
+              <p
+                class="text-base text-slate-600 dark:text-blue-200 font-semibold tracking-wide uppercase"
+                set:html={highlight}
+              />
+            )}
+            {title && (
+              <h2
+                class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading"
+                set:html={title}
+              />
+            )}
+
+            {subtitle && (
+              <p
+                class="max-w-3xl mx-auto sm:text-center text-xl text-muted dark:text-slate-400"
+                set:html={subtitle}
+              />
+            )}
+          </div>
+        )
+      }
+      <div class={`grid content-stretch place-items-center items-center justify-center gap-0 sm:grid-cols-1 md:grid-cols-2 
+          lg:grid-cols-2 max-sm:gap-3 dark:text-white my-6 pt-6 max-sm:my-1 max-sm:pt-2` }>
+          <iframe src="https://sofiahag-react-weather-app.netlify.app/" height="540px" 
+            class="border-2 border-fuchsia-300 rounded-xl drop-shadow-md hue-rotate-0 dark:border-black 
+            dark:brightness-50"></iframe>
+          <iframe src="https://sofiahag-memory.netlify.app/" height="540px" 
+            class="border-2 border-fuchsia-300 rounded-xl drop-shadow-md hue-rotate-30 dark:border-black
+            dark:brightness-50"></iframe>
+          <a class="mt-5 hover:text-fuchsia-700 dark:hover:text-blue-300 max-sm:invisible" 
+            href="https://sofiahag-react-weather-app.netlify.app/">https://sofiahag-react-weather-app.netlify.app/</a>
+          <a class="mt-5 hover:text-fuchsia-700 dark:hover:text-blue-300 max-sm:invisible" 
+            href="https://sofiahag-memory.netlify.app/">https://sofiahag-memory.netlify.app/</a>
+        </div>
+      </div>
+    </div>
+</section>

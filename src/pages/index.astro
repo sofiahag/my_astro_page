@@ -5,6 +5,7 @@ import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Me from '~/components/widgets/Me.astro';
 import Skills from '~/components/widgets/Skills.astro';
+import Projects from '~/components/widgets/Projects.astro';
 import ContactMe from '~/components/widgets/ContactMe.vue';
 
 
@@ -121,7 +122,14 @@ const meta = {
     ]}
   />
 
-   <!-- ContactMe Widget ************** -->
+  <!-- Projects Widget ************** -->
+
+  <Projects
+    title="Projects"
+    highlight="More to come!"
+  />
+
+  <!-- ContactMe Widget ************** -->
 
   <ContactMe client:load />
 
