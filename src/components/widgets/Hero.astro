@@ -50,21 +50,21 @@ const {
           )
         }
       </div>
-      <div class="text-center pt-5 max-w-screen-lg mx-auto">
+      <div class="text-center pt-2 max-w-screen-lg mx-auto">
         {
           title && (
             <h1
               class="text-6xl md:text-7xl h-[4rem] md:h-[5rem] lg:h-[5rem] font-bold font-bubblegum 
-                bg-gradient-to-r from-pink-400 via-indigo-400 to-purple-400 inline-block text-transparent
-                bg-clip-text font-outline-2 hover:from-indigo-400 hover:via-purple-400 hover:to-pink-400
-                dark:from-pink-500 dark:via-purple-500 dark:to-blue-500 dark:hover:from-blue-500
-                dark:hover:via-purple-500 dark:hover:to-pink-500"
+                bg-gradient-to-r from-purple-500 via-fuchsia-400 to-purple-500 inline-block text-transparent
+                bg-clip-text font-outline-2 hover:from-fuchsia-400 hover:via-purple-500 hover:to-fuchsia-400
+                dark:from-pink-500 dark:via-purple-400 dark:to-indigo-500 dark:hover:from-indigo-500
+                dark:hover:via-purple-400 dark:hover:to-pink-500"
               set:html={title}
             />
           )
         }
         <div class="max-w-3xl mx-auto">
-          {subtitle && <p class="text-xl text-muted mb-6 dark:text-slate-300" set:html={subtitle} />}
+          {subtitle && <p class="text-xl text-muted mb-6 dark:text-white" set:html={subtitle} />}
         </div>
       </div>
     </div>

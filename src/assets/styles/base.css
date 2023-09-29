@@ -23,6 +23,7 @@
   @font-face {
     font-family: 'Sofia Pro';
     src: local('Sofia Pro'), url('./../../../fonts/sofiapro-light.otf') format('opentype');
+    font-display: fallback;
   }
   
   .btn {

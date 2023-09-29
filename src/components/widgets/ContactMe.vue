@@ -7,20 +7,20 @@
           <form ref="form" @submit.prevent="sendEmail">
             <div class="grid grid-cols-2 gap-4">
               <div>
-                <label class="dark:text-white">Name:</label>
-                <input type="text" name="user_name" class="ml-1">
+                <label for="user_name" class="dark:text-white">Name:</label>
+                <input type="text" id="user_name" class="ml-1">
               </div>
               <div>
-                <label class="dark:text-white">E-mail:</label>
-                <input type="email" name="user_email" class="ml-1">
+                <label for="user_email" class="dark:text-white">E-mail:</label>
+                <input type="email" id="user_email" class="ml-1">
               </div>
             </div>
             <div class="grid grid-cols-1 mt-5">
               <div>
-                <label class="dark:text-white">Message:</label>
+                <label for="message" class="dark:text-white">Message:</label>
               </div>
               <div>
-                <textarea name="message" rows="3"></textarea>
+                <textarea id="message" rows="3"></textarea>
               </div>
               <div class="mt-4">
                 <button class="btn bg-gradient-to-r from-fuchsia-300 via-gray-200 to-fuchsia-300
