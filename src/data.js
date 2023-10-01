@@ -10,9 +10,6 @@ export const headerData = {
           {
             text: 'Memory App',
             href: 'https://sofiahag-memory.netlify.app'
-          },
-          {
-            text: 'More to come!'
           }
         ]
       },

@@ -92,7 +92,7 @@ abbr:where([title]) {
 Remove the default font size and weight for headings.
 */
 h1 {
-  font-family: "Bubblegum Sans";
+  font-family: "Bubblegum Sans", Arial, Helvetica, sans-serif;
 }
 
 h1,
