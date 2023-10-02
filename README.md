@@ -1,4 +1,4 @@
-# 🦄 _My page built with Astro, TailWind CSS, and Vue._ 🦄
+# 🦄 My page built with Astro, TailWind CSS, and Vue. 🦄
 
 There's dark mode!
 
