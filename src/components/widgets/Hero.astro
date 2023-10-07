@@ -1,5 +1,7 @@
 ---
 import { Picture } from '@astrojs/image/components';
+import SofiaLight from '~/assets/images/avatar-light.png'; 
+import SofiaDark from '~/assets/images/avatar-dark.png'; 
 
 interface CallToAction {
   text: string;
@@ -31,18 +33,38 @@ const {
         <div class="pb-5 md:pb-10">
         {
           image && (
-            <div class="relative m-auto max-w-5xl">
+            <div class="relative m-auto max-w-5xl block dark:hidden">
               {typeof image === 'string' ? (
                 <Fragment set:html={image} />
               ) : (
                 <Picture
                   class="mx-auto rounded-full"
+                  src={SofiaLight}
                   widths={[400, 768, 1024, 2040]}
                   sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
                   aspectRatio={200 / 200}
                   loading="eager"
                   width={200}
                   height={200}
+                  alt="Sofia_H_light"
+                  {...image}
+                />
+              )}
+            </div>
+            <div class="relative m-auto max-w-5xl hidden dark:block">
+              {typeof image === 'string' ? (
+                <Fragment set:html={image} />
+              ) : (
+                <Picture
+                  class="mx-auto rounded-full"
+                  src={SofiaDark}
+                  widths={[400, 768, 1024, 2040]}
+                  sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
+                  aspectRatio={200 / 200}
+                  loading="eager"
+                  width={200}
+                  height={200}
+                  alt="Sofia_H_dark"
                   {...image}
                 />
               )}
@@ -55,10 +77,10 @@ const {
           title && (
             <h1
               class="text-6xl md:text-7xl h-[4rem] md:h-[5rem] lg:h-[5rem] font-bold font-bubblegum 
-                bg-gradient-to-r from-purple-500 via-fuchsia-400 to-purple-500 inline-block text-transparent
-                bg-clip-text font-outline-2 hover:from-fuchsia-400 hover:via-purple-500 hover:to-fuchsia-400
+                bg-gradient-to-r from-pink-300 via-indigo-300 to-purple-300 inline-block text-transparent
+                bg-clip-text font-outline-2 hover:from-indigo-300 hover:via-purple-430 hover:to-pink-300
                 dark:from-pink-500 dark:via-purple-400 dark:to-indigo-500 dark:hover:from-indigo-500
-                dark:hover:via-purple-400 dark:hover:to-pink-500"
+                dark:hover:via-purple-400 dark:hover:to-pink-500 font-outline-1"
               set:html={title}
             />
           )

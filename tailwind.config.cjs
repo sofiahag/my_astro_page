@@ -14,9 +14,9 @@ module.exports = {
         serif: ['var(--aw-font-serif)', ...defaultTheme.fontFamily.serif],
         heading: ['var(--aw-font-heading)', ...defaultTheme.fontFamily.sans],
         bubblegum: ['Bubblegum Sans']
-      },
+      }
     },
   },
   plugins: [require('@tailwindcss/typography')],
-  darkMode: 'class',
+  darkMode: 'class'
 };

@@ -20,6 +20,14 @@
     @apply bg-black;
   }
 
+  .font-outline-1 {
+    -webkit-text-stroke: 1px rgba(71, 31, 90, 0.243);
+  }
+
+  .dark .font-outline-1 {
+    -webkit-text-stroke: 0px rgba(71, 31, 90, 0);
+  }
+
   @font-face {
     font-family: 'Sofia Pro';
     src: local('Sofia Pro'), url('./../../../fonts/sofiapro-light.otf') format('opentype');
