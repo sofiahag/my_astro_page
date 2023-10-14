@@ -10,6 +10,10 @@ export const headerData = {
           {
             text: 'Memory App',
             href: 'https://sofiahag-memory.netlify.app'
+          },
+          {
+            text: 'React/Next Task App',
+            href: 'https://sofiahag-next-todo.netlify.app'
           }
         ]
       },
