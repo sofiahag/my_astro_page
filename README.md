@@ -2,4 +2,4 @@
 
 There's dark mode!
 
-https://www.sofiahag.com
+https://sofiahag.netlify.app/
