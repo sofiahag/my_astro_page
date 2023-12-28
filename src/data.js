@@ -5,15 +5,15 @@ export const headerData = {
         links: [
           {
             text: 'React Weather App',
-            href: 'https://sofiahag-react-weather-app.netlify.app'
+            href: 'https://github.com/sofiahag/my-react-weather-app'
           },
           {
             text: 'Memory App',
-            href: 'https://sofiahag-memory.netlify.app'
+            href: 'https://github.com/sofiahag/sofiahag-memory'
           },
           {
             text: 'React/Next Task App',
-            href: 'https://sofiahag-next-todo.netlify.app'
+            href: 'https://github.com/sofiahag/sofiahag-react-todo'
           }
         ]
       },
