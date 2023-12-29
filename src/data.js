@@ -14,6 +14,10 @@ export const headerData = {
           {
             text: 'React/Next Task App',
             href: 'https://github.com/sofiahag/sofiahag-react-todo'
+          },
+          {
+            text: 'Vanilla ES6 user app',
+            href: 'https://github.com/sofiahag/user_app'
           }
         ]
       },
