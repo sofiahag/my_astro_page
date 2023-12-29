@@ -16,7 +16,7 @@ export const headerData = {
             href: 'https://github.com/sofiahag/sofiahag-react-todo'
           },
           {
-            text: 'Vanilla ES6 user app',
+            text: 'Vanilla ES6 user App',
             href: 'https://github.com/sofiahag/user_app'
           }
         ]
