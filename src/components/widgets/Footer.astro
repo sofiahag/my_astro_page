@@ -1,7 +1,5 @@
 ---
 import { Icon } from 'astro-icon';
-import { SITE } from '~/config.mjs';
-import { getHomePermalink } from '~/utils/permalinks';
 
 interface Link {
   text?: string;
@@ -32,7 +30,7 @@ const { personalIcons = [], theme = 'light' } = Astro.props;
     <div class="py-8 md:py-12">
       <div class="col-span-12 lg:col-span-4">
         <div class="flex items-center justify-between md:py-4">
-          <span class="inline-block font-bold text-sm">Created by Sofia Haglund using <a href="https://github.com/onwidget/astrowind">AstroWind</a></span>
+          <span class="inline-block font-bold text-sm">Created by Sofia Haglund using <a href="https://github.com/onwidget/astrowind">AstroWind</a><br></span>
           {
             personalIcons?.length ? (
               <ul class="flex">
@@ -49,6 +47,7 @@ const { personalIcons = [], theme = 'light' } = Astro.props;
             )
           }
         </div>
+        <p class="inline-block font-bold text-xs">Last Updated: 2024-01-11</p>
       </div>
     </div>
   </div>
