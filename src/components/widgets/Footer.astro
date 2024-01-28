@@ -30,15 +30,15 @@ const { personalIcons = [], theme = 'light' } = Astro.props;
     <div class="py-8 md:py-12">
       <div class="col-span-12 lg:col-span-4">
         <div class="flex items-center justify-between md:py-4">
-          <span class="inline-block font-bold text-sm">Created by Sofia Haglund using <a href="https://github.com/onwidget/astrowind">AstroWind</a><br></span>
+          <span class="inline-block font-bold text-sm max-sm:text-xs">Created by Sofia Haglund using <a href="https://github.com/onwidget/astrowind">AstroWind</a><br></span>
           {
             personalIcons?.length ? (
               <ul class="flex">
                 { personalIcons.map(({ icon }) => (
                   <li
-                      class="text-muted dark:text-gray-400 rounded-lg text-sm p-2.5 inline-flex items-center"
+                      class="p-2.5 inline-flex items-center"
                     >
-                      {icon && <Icon name={icon} class="w-5 h-5" />}
+                      {icon && <Icon name={icon} class="w-5 h-5 max-sm:hidden" />}
                   </li>
                 ))}
               </ul>
@@ -47,7 +47,7 @@ const { personalIcons = [], theme = 'light' } = Astro.props;
             )
           }
         </div>
-        <p class="inline-block font-bold text-xs">Last Updated: 2024-01-11</p>
+        <p class="inline-block font-bold text-xs">Last Updated: 2024-01-28</p>
       </div>
     </div>
   </div>

@@ -28,7 +28,7 @@ const {
   <div class="absolute inset-0 pointer-events-none" aria-hidden="true"></div>
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
     <div class="pt-0 md:pt-[76px] pointer-events-none"></div>
-    <div class="py-12 md:py-20">
+    <div class="py-5 md:py-10">
       <div class="text-center max-w-screen-lg mx-auto">
         <div class="pb-5 md:pb-10">
         {
@@ -76,11 +76,9 @@ const {
         {
           title && (
             <h1
-              class="text-6xl md:text-7xl h-[4rem] md:h-[5rem] lg:h-[5rem] font-bold font-bubblegum 
-                bg-gradient-to-r from-pink-300 via-indigo-300 to-purple-300 inline-block text-transparent
-                bg-clip-text font-outline-2 hover:from-indigo-300 hover:via-purple-430 hover:to-pink-300
-                dark:from-pink-500 dark:via-purple-400 dark:to-indigo-500 dark:hover:from-indigo-500
-                dark:hover:via-purple-400 dark:hover:to-pink-500 font-outline-1"
+              class="text-6xl md:text-7xl max-sm:text-5xl h-[4rem] md:h-[5rem] lg:h-[5rem] font-bold font-sofia 
+              text-violet-300 inline-block text-transparent
+                bg-clip-text font-outline-2 dark:text-slate-200 font-outline-1"
               set:html={title}
             />
           )
