@@ -1,5 +1,5 @@
 <template>
-  <section class="relative bg-gradient-to-b from-gray-800 via-gray-900 via-95% to-white dark:from-black dark:to-black">
+  <section class="relative bg-gradient-to-b from-white to-white dark:from-black dark:to-black">
     <div class="max-w-6xl mx-auto px-4">
       <div class="py-[100px]">
         <div class="max-w-3xl mx-auto bg-blue-200 dark:bg-indigo-700 text-center p-6 rounded-md shadow-sm shadow-white dark:shadow-none 
