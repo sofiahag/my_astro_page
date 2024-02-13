@@ -28,8 +28,8 @@ const {
   <div class="absolute inset-0 pointer-events-none" aria-hidden="true"></div>
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
     <div class="pt-0 md:pt-[76px] pointer-events-none"></div>
-    <div class="grid grid-cols-2 max-sm:grid-cols-1 py-5 md:py-10">
-      <div class="text-center max-w-screen-lg mx-auto lg:mt-0 md:mt-[70px]">
+    <div class="grid grid-cols-6 max-sm:grid-cols-1 py-5 md:py-10 lg:ml-[40px]">
+      <div class="lg:col-span-2 md:col-span-3 max-sm:col-span-2 text-center max-w-screen-lg mx-auto lg:mt-0 md:mt-[20px]">
         <div class="pb-5 md:pb-10">
         {
           image && (
@@ -78,8 +78,7 @@ const {
           title && (
             <h1
               class="text-6xl md:text-5xl max-sm:text-5xl h-[4rem] md:h-[4rem] lg:h-[3rem] max-sm:h-[3.5rem]
-              font-bold font-sofia inline-block text-transparent bg-clip-text font-outline-2 font-outline-1
-              bg-gradient-to-r from-blue-300 via-violet-300 to-fuchsia-300 dark:text-white"
+              font-bold font-sofia inline-block unicorn-title dark:text-white"
               set:html={title}
             />
           )
@@ -89,23 +88,22 @@ const {
         </div>
       </div>
     </div>
-    <div class="text-lg text-center lg:mr-[160px] md:text-base md:mr-[50px] max-sm:mr-0 max-sm:my-5">
-    I currently work as a <span class="text-2xl">Bioinformatician/System Developer</span> at 
-      <a href="https://www.scilifelab.se/" class="text-purple-500 dark:text-fuchsia-200 font-bold" target="_blank">SciLifeLab</a> 
-      in Solna at 
-      <a href="https://ngisweden.scilifelab.se/" class="text-purple-500 dark:text-fuchsia-200 font-bold" target="_blank">NGI</a> 
-      (but employed by 
-      <a href="https://ki.se/en" class="text-purple-500 dark:text-fuchsia-200 font-bold">Karolinska Institute</a> 
-      as a Bioinformatician- confusing I know!)
+    <div class="lg:col-span-4 md:col-span-3 max-sm:col-span-1 lg:mx-[80px] md:mx-[30px] max-sm:mx-[30px] lg:text-xl text-center 
+      md:text-base max-sm:my-5">
+      I currently work as a <span class="lg:text-2xl unicorn-paragraph">Bioinformatician/System Developer</span> at SciLifeLab
+      in Solna at NGI (but employed by Karolinska Institute as a Bioinformatician- confusing I know!)
       <br>
-      I'm a <span class="text-2xl">creative, passionate,</span> and <span class="text-2xl">independent</span> individual.
-      I love to code, particularly in <span class="text-2xl">JavaScript</span>, 
+      I'm a <span class="lg:text-2xl unicorn-paragraph">creative, analytical,</span> and <span class="lg:text-2xl unicorn-paragraph">
+      independent</span> individual. I love to code, particularly in <span class="lg:text-2xl unicorn-paragraph">JavaScript</span>, 
       and I am constantly exploring new techniques and languages to broaden my skill set. 
-      Design, especially within the realms of <span class="text-2xl">UX</span> and <span class="text-2xl">graphic design,</span>
-      resonates with me on a deep level.
-      Beyond the screen, you'll often find me at the <span class="text-2xl">gym</span> or on a <span class="text-2xl">hike.</span>
-      When I'm not immersed in the great outdoors, you might also catch me delving into the virtual realms of <span class="text-2xl">video games.</span>
-      However, my greatest joy comes from spending quality time with my <span class="text-2xl">family.</span>
+      <span class="lg:text-2xl unicorn-paragraph">Design,</span> especially within the realms of <span class="lg:text-2xl unicorn-paragraph">
+      UX</span> and <span class="lg:text-2xl unicorn-paragraph">graphic design,</span> resonates with me on a deep level.
+      <br>
+      Beyond the screen, you'll often find me at the <span class="lg:text-2xl unicorn-paragraph">gym</span> or on a 
+      <span class="lg:text-2xl unicorn-paragraph">hike.</span>
+      When I'm not immersed in the great outdoors, you might also catch me delving into the virtual realms of 
+      <span class="lg:text-2xl unicorn-paragraph">video games.</span>
+      However, my greatest joy comes from spending quality time with my <span class="lg:text-2xl unicorn-paragraph">family.</span>
     </div>
   </div>
 </section>
