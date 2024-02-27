@@ -39,7 +39,11 @@ const { language = 'en', textDirection = 'ltr' } = SITE;
         r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
         a.appendChild(r);
       })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-    </script>
+    </script>   
+    <MetaTags {...meta} />
+  </head>
+
+  <body class="antialiased text-page bg-white dark:bg-black tracking-tight dark:text-white dark:from-black dark:to-slate-600">
     <script type="text/javascript">
       (function(window, document, dataLayerName, id) {
       window[dataLayerName]=window[dataLayerName]||[],window[dataLayerName].push({start:(new Date).getTime(),event:"stg.start"});var scripts=document.getElementsByTagName('script')[0],tags=document.createElement('script');
@@ -49,11 +53,7 @@ const { language = 'en', textDirection = 'ltr' } = SITE;
       tags.async=!0,tags.src="https://sofiahag.containers.piwik.pro/"+id+".js"+qPString,scripts.parentNode.insertBefore(tags,scripts);
       !function(a,n,i){a[n]=a[n]||{};for(var c=0;c<i.length;c++)!function(i){a[n][i]=a[n][i]||{},a[n][i].api=a[n][i].api||function(){var a=[].slice.call(arguments,0);"string"==typeof a[0]&&window[dataLayerName].push({event:n+"."+i+":"+a[0],parameters:[].slice.call(arguments,1)})}}(i[c])}(window,"ppms",["tm","cm"]);
       })(window, document, 'dataLayer', '2629ff1f-d822-46d5-bb17-5396bef88c7e');
-      </script>    
-    <MetaTags {...meta} />
-  </head>
-
-  <body class="antialiased text-page bg-white dark:bg-black tracking-tight dark:text-white dark:from-black dark:to-slate-600">
+    </script> 
     <slot />
     <BasicScripts />
     <style is:global>
