@@ -39,7 +39,7 @@
   }
 
   .unicorn-paragraph {
-    @apply font-outline-1 text-fuchsia-500 dark:text-amber-100;
+    @apply font-outline-1 text-fuchsia-600 dark:text-amber-100;
   }
   
   .btn {

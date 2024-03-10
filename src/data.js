@@ -1,7 +1,7 @@
 export const headerData = {
   links: [
     {
-      text: 'Projects',
+      text: 'My Apps',
         links: [
           {
             text: 'React Weather App',

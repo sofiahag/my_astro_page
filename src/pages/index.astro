@@ -4,6 +4,7 @@ import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
 import Work from '~/components/widgets/Work.astro';
+import UX from '~/components/widgets/UX.astro';
 import Videos from '~/components/widgets/Videos.astro';
 import Skills from '~/components/widgets/Skills.astro';
 import ContactMe from '~/components/widgets/ContactMe.vue';
@@ -44,6 +45,11 @@ const meta = {
         icon: 'logos:python',
       },
       {
+        title: 'SQL',
+        description: 'Beginner',
+        icon: 'vscode-icons:file-type-sql',
+      },
+      {
         title: 'HTML',
         description: 'Mid level',
         icon: 'logos:html-5',
@@ -54,34 +60,9 @@ const meta = {
         icon: 'logos:javascript',
       },
       {
-        title: 'Node',
-        description: 'Beginner',
-        icon: 'logos:nodejs-icon',
-      },
-      {
-        title: 'Vue',
-        description: 'Beginner',
-        icon: 'logos:vue',
-      },
-      {
         title: 'React',
         description: 'Beginner',
         icon: 'logos:react',
-      },
-      {
-        title: 'React Native',
-        description: 'Beginner',
-        icon: 'logos:react',
-      },
-      {
-        title: 'Redux',
-        description: 'Beginner',
-        icon: 'logos:redux',
-      },
-      {
-        title: 'TypeScript',
-        description: 'Beginner',
-        icon: 'logos:typescript-icon',
       },
       {
         title: 'Astro',
@@ -99,11 +80,6 @@ const meta = {
         icon: 'logos:php',
       },
       {
-        title: 'SQL',
-        description: 'Beginner',
-        icon: 'vscode-icons:file-type-sql',
-      },
-      {
         title: 'Wordpress',
         description: 'Mid level',
         icon: 'bi:wordpress',
@@ -117,11 +93,6 @@ const meta = {
         title: 'Tailwind CSS',
         description: 'Mid level',
         icon: 'vscode-icons:file-type-tailwind',
-      },
-      {
-        title: 'Bootstrap',
-        description: 'Mid level',
-        icon: 'logo:bootstrap',
       }
     ]}
   />
@@ -183,6 +154,13 @@ const meta = {
       },
     ]}
 />
+
+  <!-- Videos Widget ************** -->
+
+  <UX
+    title="Prototypes"
+    highlight="UX Design"
+  />
 
   <!-- Videos Widget ************** -->
 
