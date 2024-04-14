@@ -5,6 +5,7 @@ import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Work from '~/components/widgets/Work.astro';
 import UX from '~/components/widgets/UX.astro';
+import Dashboard from '~/components/widgets/Dashboard.astro';
 import Videos from '~/components/widgets/Videos.astro';
 import Skills from '~/components/widgets/Skills.astro';
 import ContactMe from '~/components/widgets/ContactMe.vue';
@@ -103,6 +104,13 @@ const meta = {
     title="Work Experience"
     items={[
       {
+        title: '2024-<br>Junior CRO Analyst',
+        subtitle: 'LeoVegas',
+        description:
+          ``,
+        icon: 'noto-v1:lion',
+      },
+      {
         title: '2018-<br>Bioinformatician/System Developer',
         subtitle: 'National Genomics Infrastructure (SciLifeLab, KI)',
         description:
@@ -160,6 +168,13 @@ const meta = {
   <UX
     title="Prototypes"
     highlight="UX Design"
+  />
+
+    <!-- Dashboard Widget ************** -->
+
+  <Dashboard
+    title="User Stats"
+    highlight="Digital Analytics"
   />
 
   <!-- Videos Widget ************** -->

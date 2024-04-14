@@ -1,0 +1,48 @@
+---
+
+const {
+  title = await Astro.slots.render('title'),
+  highlight,
+} = Astro.props;
+
+---
+
+<section class="relative bg-white dark:bg-black">
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="py-4 pt-8 sm:py-6 lg:py-8 lg:pt-12">
+      {
+        (title || highlight) && (
+          <div class="mb-8 md:mx-auto text-center max-w-3xl">
+            {highlight && (
+              <p
+                class="text-base text-slate-600 dark:text-white font-semibold tracking-wide uppercase"
+                set:html={highlight}
+              />
+            )}
+            {title && (
+              <h2
+                class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading"
+                set:html={title}
+            />
+            )}
+          </div>
+        )
+      }
+      <p class="text-center text-black text-xl dark:text-white">
+        Dashboard displaying this page's user stats based on GA4 data created in Looker Studio:
+      </p>
+    </div>
+    <div class="px-2 py-6 place-items-center">
+      <iframe src="https://lookerstudio.google.com/embed/reporting/238f3d5d-19e2-4039-9bb5-30d931500b50/page/VrdwD" 
+        frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin 
+        allow-popups allow-popups-to-escape-sandbox" class="block dark:hidden lg:w-[1200px] lg:h-[980px] md:w-[700px]
+        md:h-[540px] max-sm:w-[330px] max-sm:h-[280px]">
+      </iframe>
+      <iframe width="1200px" height="1000px" src="https://lookerstudio.google.com/embed/reporting/81f7425b-3ea8-4f8f-ae1e-e71d825b606b/page/VrdwD" 
+        frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin 
+        allow-popups allow-popups-to-escape-sandbox" class="hidden dark:block lg:w-[1200px] lg:h-[980px] md:w-[700px]
+        md:h-[540px] max-sm:w-[330px] max-sm:h-[280px]">
+      </iframe>
+    </div>
+  </div>
+</section>
