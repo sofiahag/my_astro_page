@@ -1,7 +1,6 @@
 ---
 import { Picture } from '@astrojs/image/components';
-import SofiaLight from '~/assets/images/avatar-light.png'; 
-import SofiaDark from '~/assets/images/avatar-dark.png'; 
+import Sofia from '~/assets/images/avatar.png';  
 
 interface CallToAction {
   text: string;
@@ -28,43 +27,25 @@ const {
   <div class="absolute inset-0 pointer-events-none" aria-hidden="true"></div>
   <div class="relative max-w-5xl mx-auto px-4 sm:px-6">
     <div class="pt-0 md:pt-[76px] pointer-events-none"></div>
-    <div class="grid grid-cols-4 max-sm:grid-cols-1 py-5 md:py-10">
+    <div class="grid grid-cols-4 max-sm:grid-cols-1 py-5 md:pt-[80px] md:pb-[50px]">
       <div class="lg:col-span-2 md:col-span-2 max-sm:col-span-2 text-center max-w-screen-lg mx-auto lg:mt-0 md:mt-[20px]">
         <div class="pb-5 md:pb-10">
         {
           image && (
-            <div class="relative m-auto max-w-5xl block dark:hidden">
+            <div class="relative m-auto max-w-5xl block">
               {typeof image === 'string' ? (
                 <Fragment set:html={image} />
               ) : (
                 <Picture
                   class="mx-auto rounded-full"
-                  src={SofiaLight}
+                  src={Sofia}
                   widths={[400, 768, 1024, 2040]}
                   sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
                   aspectRatio={200 / 200}
                   loading="eager"
                   width={200}
                   height={200}
-                  alt="Sofia_H_light"
-                  {...image}
-                />
-              )}
-            </div>
-            <div class="relative m-auto max-w-5xl hidden dark:block">
-              {typeof image === 'string' ? (
-                <Fragment set:html={image} />
-              ) : (
-                <Picture
-                  class="mx-auto rounded-full"
-                  src={SofiaDark}
-                  widths={[400, 768, 1024, 2040]}
-                  sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
-                  aspectRatio={200 / 200}
-                  loading="eager"
-                  width={200}
-                  height={200}
-                  alt="Sofia_H_dark"
+                  alt="Sofia_Haglund"
                   {...image}
                 />
               )}
@@ -72,29 +53,29 @@ const {
           )
         }
       </div>
-      <div class="text-xl max-sm:mt-3">Hi! 👋 I'm</div>
+      <div class="text-xl max-sm:mt-3">Welcome! I'm</div>
       <div class="text-center pt-2 max-w-screen-lg mx-auto">
         {
           title && (
             <h1
-              class="text-6xl md:text-5xl max-sm:text-5xl h-[4rem] md:h-[4rem] lg:h-[3rem] max-sm:h-[3.5rem]
-              font-bold font-sofia inline-block unicorn-title dark:text-white"
+              class="text-6xl md:text-5xl max-sm:text-5xl h-[4rem] md:h-[3.5rem] lg:h-[3.5rem] max-sm:h-[3.5rem]
+              font-bold font-sofia inline-block sofia-title"
               set:html={title}
             />
           )
         }
         <div class="max-w-3xl mx-auto">
-          {subtitle && <h2 class="text-xl max-sm:text-sm text-muted mb-3 dark:text-white" set:html={subtitle} />}
+          {subtitle && <h2 class="text-xl max-sm:text-sm text-muted mb-3 md:text-base" set:html={subtitle} />}
         </div>
       </div>
     </div>
-    <div class="lg:col-span-2 md:col-span-2 max-sm:col-span-1 lg:mx-[40px] lg:mt-[40px] md:mx-[20px] max-sm:mx-[30px] lg:text-xl text-center 
-      md:mt-[80px] md:text-base max-sm:my-5">
-      Embarking on a new journey as a <span class="lg:text-2xl unicorn-paragraph">CRO analyst</span>, I bring a newfound 
-      passion for digital analytics along with a keen interest in <span class="lg:text-2xl unicorn-paragraph">web development, 
-      UX,</span> and <span class="lg:text-2xl unicorn-paragraph">graphic design.</span> With a background rooted in 
-      <span class="lg:text-2xl unicorn-paragraph">Life Science</span> I offer a unique and intriguing perspective. Beyond work, 
-      I have a love for the <span class="lg:text-2xl unicorn-paragraph">outdoors, gaming,</span> and <span class="lg:text-2xl unicorn-paragraph">
+    <div class="lg:col-span-2 md:col-span-2 max-sm:col-span-1 lg:mx-[35px] lg:mt-[60px] md:mx-[20px] max-sm:mx-[30px] lg:text-xl 
+      md:mt-[80px] max-sm:my-5">
+      Embarking on a new journey as a <span class="text-yellow-950">CRO analyst</span>, I bring a newfound 
+      passion for digital analytics along with a keen interest in <span class="text-yellow-950">web development, 
+      UX,</span> and <span class="text-yellow-950">graphic design.</span> With a background rooted in 
+      <span class="text-yellow-950">Life Science</span> I offer a unique and intriguing perspective. Beyond work, 
+      I have a love for the <span class="text-yellow-950">outdoors, gaming,</span> and <span class="text-yellow-950">
       family.</span>
     </div>
   </div>

@@ -1,5 +1,5 @@
 let i = 0;
-let text = "A Bioinformatician and System Developer";
+let text = "A CRO Analyst with a background in Life Science";
 let speed = 100;
 
 function typeWriter() {

@@ -15,6 +15,11 @@ const { meta } = Astro.props;
 ---
 
 <Layout {meta}>
+  <div id="cookieConsent">
+    My website uses Google Analytics to create the dashboard featured on this page. 
+    This means there is tracking code to collect data about user traffic, including yours. 
+    <button id="acceptButton">Fine by me!</button>
+  </div>
   <slot name="header">
     <Header {...headerData} isSticky showRssFeed showToggleTheme />
   </slot>
@@ -25,3 +30,41 @@ const { meta } = Astro.props;
     <Footer {...footerData} />
   </slot>
 </Layout>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // Function to set cookie
+    function setCookie(cookieName, cookieValue, expiryDays) {
+      const d = new Date();
+      d.setTime(d.getTime() + (expiryDays * 24 * 60 * 60 * 1000));
+      const expires = "expires=" + d.toUTCString();
+      document.cookie = cookieName + "=" + cookieValue + ";" + expires + ";path=/";
+    }
+
+    // Function to check if cookie exists
+    function checkCookie(cookieName) {
+      const cookies = decodeURIComponent(document.cookie).split(';');
+      for (let i = 0; i < cookies.length; i++) {
+        let cookie = cookies[i];
+        while (cookie.charAt(0) === ' ') {
+          cookie = cookie.substring(1);
+        }
+        if (cookie.indexOf(cookieName + "=") === 0) {
+          return true;
+        }
+      }
+      return false;
+    }
+
+    // Check if the user has accepted the cookie
+    if (!checkCookie('cookieConsent')) {
+      document.getElementById('cookieConsent').style.display = 'block';
+    }
+
+    // When the user clicks on the accept button
+    document.getElementById('acceptButton').addEventListener('click', function() {
+      setCookie('cookieConsent', 'accepted', 30); // Cookie expires in 30 days
+      document.getElementById('cookieConsent').style.display = 'none';
+    });
+  });
+</script>

@@ -34,12 +34,8 @@
     font-display: fallback;
   }
 
-  .unicorn-title {
-    @apply text-transparent bg-clip-text font-outline-1 bg-gradient-to-r from-blue-300 to-fuchsia-300;
-  }
-
-  .unicorn-paragraph {
-    @apply font-outline-1 text-fuchsia-600 dark:text-amber-100;
+  .sofia-title {
+    @apply text-transparent bg-clip-text font-outline-1 bg-gradient-to-b from-black via-yellow-600 to-yellow-950;
   }
   
   .btn {
@@ -56,7 +52,32 @@
 }
 
 #header.scroll {
-  @apply shadow-md md:shadow-lg bg-white md:bg-white/90 md:backdrop-blur-sm dark:bg-slate-900 dark:md:bg-slate-900/90;
+  @apply shadow-md md:shadow-lg bg-black/70 md:backdrop-blur-sm dark:bg-slate-900 dark:md:bg-slate-900/90;
+}
+
+#cookieConsent {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+#cookieConsent button {
+  background-color: #BAD0ED;
+  color: black;
+  border: 1px #764924;
+  border-radius: 50px;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
 }
 
 .dropdown:hover .dropdown-menu {
@@ -82,7 +103,7 @@
   @apply rotate-45 translate-y-[-8px] translate-x-[14px];
 }
 
-canvas{
+canvas {
   position: absolute;
   width: 100%;
   height: 100%;

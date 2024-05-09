@@ -24,14 +24,14 @@ export interface Props {
 const { personalIcons = [], theme = 'light' } = Astro.props;
 ---
 
-<footer class:list={[{ dark: theme === 'dark' }, 'relative border-t border-gray-200 dark:border-slate-800']}>
-  <div class="bg-gradient-to-b from-white via-fuchsia-200 to-blue-300 dark:from-black dark:to-gray-600 absolute inset-0 pointer-events-none" aria-hidden="true"></div>
-  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 dark:text-white">
+<footer class:list={[{ dark: theme === 'dark' }, 'relative border-t border-gray-200']}>
+  <div class="absolute inset-0 pointer-events-none" aria-hidden="true"></div>
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
     <div class="py-8 md:py-12">
       <div class="col-span-12 lg:col-span-4">
         <div class="flex items-center justify-between md:py-4">
-          <span class="inline-block font-bold text-sm max-sm:text-xs">Created by Sofia Haglund using <a href="https://github.com/onwidget/astrowind" class="text-teal-700 dark:text-fuchsia-300"
-            target="_blank">AstroWind</a><br></span>
+          <span class="inline-block font-bold text-sm max-sm:text-xs">Created by Sofia Haglund using <a href="https://github.com/onwidget/astrowind" 
+            class="text-yellow-700" target="_blank">AstroWind</a><br></span>
           {
             personalIcons?.length ? (
               <ul class="flex">
@@ -48,7 +48,7 @@ const { personalIcons = [], theme = 'light' } = Astro.props;
             )
           }
         </div>
-        <p class="inline-block font-bold text-xs">Last Updated: 2024-03-10</p>
+        <p class="inline-block font-bold text-xs">Last Updated: 2024-05-09</p>
       </div>
     </div>
   </div>
