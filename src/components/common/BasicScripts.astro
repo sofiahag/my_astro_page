@@ -42,13 +42,13 @@ import { SITE } from '~/config.mjs';
       document.querySelector('#header nav')?.classList.toggle('hidden');
     });
 
-    attachEvent('[data-aw-toggle-color-scheme]', 'click', function () {
+/*     attachEvent('[data-aw-toggle-color-scheme]', 'click', function () {
       if (defaultTheme.endsWith(':only')) {
         return;
       }
       document.documentElement.classList.toggle('dark');
       localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
-    });
+    }); */
 
     attachEvent('[data-aw-social-share]', 'click', function (_, elem) {
       const network = elem.getAttribute('data-aw-social-share');
