@@ -7,17 +7,17 @@
           <form ref="form" @submit.prevent="sendEmail">
             <div class="grid grid-cols-2 gap-4">
               <div>
-                <label for="user_name" class="font-bold">Name:</label>
+                <label for="user_name" class="font-bold max-sm:text-sm">Name:</label>
                 <input type="text" id="user_name" class="ml-1">
               </div>
               <div>
-                <label for="user_email" class="font-bold">E-mail:</label>
+                <label for="user_email" class="font-bold max-sm:text-sm">E-mail:</label>
                 <input type="email" id="user_email" class="ml-1">
               </div>
             </div>
             <div class="grid grid-cols-1 mt-5">
               <div>
-                <label for="message" class="font-bold">Message:</label>
+                <label for="message" class="font-bold max-sm:text-sm">Message:</label>
               </div>
               <div>
                 <textarea id="message" rows="3"></textarea>
