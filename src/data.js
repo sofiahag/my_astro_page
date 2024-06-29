@@ -13,12 +13,12 @@ export const headerData = {
     {
       text: 'LeoVegas',
       href: 'https://www.leovegas.com/',
-      icon: 'emojione-monotone:lion-face'
+      icon: 'mdi:slot-machine'
     },
     {
-      text: 'YouTube',
-      href: 'https://www.youtube.com/channel/UCkOM8G7wEJKloyYT6sIo63w',
-      icon: 'mdi:youtube'
+      text: 'LeoVegas Group',
+      href: 'https://leovegasgroup.com/',
+      icon: 'emojione-monotone:lion-face'
     }
   ]
 };
