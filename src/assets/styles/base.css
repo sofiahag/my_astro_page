@@ -68,7 +68,6 @@
 }
 
 #cookieConsent button {
-  background-color: #BAD0ED;
   color: black;
   border: 1px #764924;
   border-radius: 50px;
@@ -79,6 +78,14 @@
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
+}
+
+#acceptButton {
+  background-color: #BAD0ED;
+}
+
+#declineButton {
+  background-color: #E5BC99;
 }
 
 .dropdown:hover .dropdown-menu {

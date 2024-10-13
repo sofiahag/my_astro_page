@@ -18,6 +18,7 @@ const { meta } = Astro.props;
   <div id="cookieConsent">
     Hi! Just letting you know that my website uses cookies and Google Analytics&nbsp;
     <button id="acceptButton">Fine by me!</button>
+    <button id="declineButton">I don't like that.</button>
   </div>
   <slot name="header">
     <Header {...headerData} isSticky showRssFeed showToggleTheme />
@@ -44,19 +45,18 @@ const { meta } = Astro.props;
     function checkCookie(cookieName) {
       const cookies = decodeURIComponent(document.cookie).split(';');
       for (let i = 0; i < cookies.length; i++) {
-        let cookie = cookies[i];
-        while (cookie.charAt(0) === ' ') {
-          cookie = cookie.substring(1);
-        }
+        let cookie = cookies[i].trim();
         if (cookie.indexOf(cookieName + "=") === 0) {
-          return true;
+          return cookie.substring(cookieName.length + 1);
         }
       }
-      return false;
+      return null;
     }
 
+    const cookieConsent = checkCookie('cookieConsent');
+
     // Check if the user has accepted the cookie
-    if (!checkCookie('cookieConsent')) {
+    if (!cookieConsent) {
       document.getElementById('cookieConsent').style.display = 'block';
     }
 
@@ -64,6 +64,30 @@ const { meta } = Astro.props;
     document.getElementById('acceptButton').addEventListener('click', function() {
       setCookie('cookieConsent', 'accepted', 30); // Cookie expires in 30 days
       document.getElementById('cookieConsent').style.display = 'none';
+      loadGoogleAnalytics();
     });
+    document.getElementById('declineButton').addEventListener('click', function() {
+      setCookie('cookieConsent', 'declined', 30); // Cookie expires in 30 days
+      document.getElementById('cookieConsent').style.display = 'none';
+    });
+
+    function loadGoogleAnalytics() {
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = "https://www.googletagmanager.com/gtag/js?id=G-7YKMWLRCBW";
+      document.head.appendChild(script);
+
+      script.onload = function() {
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-7YKMWLRCBW');
+      };
+    }
+
+    // Check if user already accepted cookies and load GA4 if true
+    if (cookieConsent === 'accepted') {
+      loadGoogleAnalytics();
+    }
   });
 </script>
