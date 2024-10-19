@@ -2,7 +2,7 @@ export const headerData = {
   links: [
     {
       text: 'LinkedIn',
-      href: 'https://www.linkedin.com/in/sofia-haglund-6939a8160/',
+      href: 'https://www.linkedin.com/in/sofia-haglund-🦁-6939a8160',
       icon: 'mdi:linkedin'
     },
     {
