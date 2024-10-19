@@ -16,9 +16,11 @@ const { meta } = Astro.props;
 
 <Layout {meta}>
   <div id="cookieConsent">
-    Hi! Just letting you know that my website uses cookies and Google Analytics&nbsp;
-    <button id="acceptButton">Fine by me!</button>
-    <button id="declineButton">I don't like that.</button>
+    Hi! Just letting you know that my website uses cookies and Google Analytics.&nbsp;
+    <div class="space-y-2 sm:space-y-4 md:space-y-6">
+      <button id="acceptButton" class="block">Fine by me!</button>
+      <button id="declineButton" class="block">I don't like that.</button>
+    </div>        
   </div>
   <slot name="header">
     <Header {...headerData} isSticky showRssFeed showToggleTheme />
