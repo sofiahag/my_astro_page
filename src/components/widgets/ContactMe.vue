@@ -44,6 +44,7 @@
           .then((result) => {
               console.log('SUCCESS!', result.text);
               alert("Your message has been sent!");
+              this.$refs.form.reset();
           }, (error) => {
               console.log('FAILED...', error.text);
               alert("There was an error in sending your message");
