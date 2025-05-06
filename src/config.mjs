@@ -1,7 +1,7 @@
 const CONFIG = {
-  name: 'Sofia Haglund',
+  name: 'Sofia Silverslott',
 
-  origin: 'https://www.sofiahag.com', //'https://example.com'
+  origin: 'https://www.silverslott.com', //'https://example.com'
   basePathname: '/', // Change this if you need to deploy to Github Pages, for example
   trailingSlash: false, // Generate permalinks with or without "/" at the end
 

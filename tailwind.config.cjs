@@ -13,7 +13,8 @@ module.exports = {
         sans: ['Sofia Pro'],
         serif: ['var(--aw-font-serif)', ...defaultTheme.fontFamily.serif],
         heading: ['var(--aw-font-heading)', ...defaultTheme.fontFamily.sans],
-        bubblegum: ['Bubblegum Sans']
+        bubblegum: ['Bubblegum Sans'],
+        dancing: ['Dancing Script Variable']
       }
     },
   },
