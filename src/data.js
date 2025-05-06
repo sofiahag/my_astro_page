@@ -2,7 +2,7 @@ export const headerData = {
   links: [
     {
       text: 'LinkedIn',
-      href: 'www.linkedin.com/in/sofia-silverslott-6939a8160',
+      href: 'https://www.linkedin.com/in/sofia-silverslott-6939a8160',
       icon: 'mdi:linkedin'
     },
     {
