@@ -2,12 +2,12 @@ export const headerData = {
   links: [
     {
       text: 'LinkedIn',
-      href: 'https://www.linkedin.com/in/sofia-haglund-🦁-6939a8160',
+      href: 'www.linkedin.com/in/sofia-silverslott-6939a8160',
       icon: 'mdi:linkedin'
     },
     {
       text: 'GitHub',
-      href: 'https://github.com/sofiahag',
+      href: 'https://github.com/silverslott',
       icon: 'mdi:github'
     },
     {
