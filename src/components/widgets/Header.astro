@@ -9,6 +9,7 @@ interface Link {
   href?: string;
   ariaLabel?: string;
   icon?: string;
+  external?: boolean;
 }
 
 interface MenuLink extends Link {
@@ -51,22 +52,28 @@ const {
     >
       <ul class="flex flex-col pt-8 md:pt-0 md:flex-row md:self-center w-full md:w-auto text-xl md:text-base">
         {
-          links.map(({ text, href, icon, links }) => (
-            <li class={links?.length ? "dropdown" : ""}>
-              {links?.length ? (
+          links.map(({ text, href, icon, links: subLinks, external }) => (
+            <li class={subLinks?.length ? "dropdown" : ""}>
+              {subLinks?.length ? (
                 <>
                   <button class="hover:text-link px-4 py-3 flex items-center">
-                    {text} <Icon name="tabler:chevron-down" class="w-3.5 h-3.5 ml-0.5 rtl:ml-0 rtl:mr-0.5 hidden md:inline" />
+                    {text}
+                    <Icon
+                      name="tabler:chevron-down"
+                      class="w-3.5 h-3.5 ml-0.5 rtl:ml-0 rtl:mr-0.5 hidden md:inline"
+                    />
                   </button>
+        
                   <ul class="dropdown-menu md:backdrop-blur-md rounded md:absolute pl-4 md:pl-0 md:hidden font-medium md:min-w-[200px] drop-shadow-xl">
-                    {links.map(({ text: text2, href: href2 }) => (
+                    {subLinks.map(({ text: text2, href: href2, external: external2 }) => (
                       <li>
                         <a
                           class:list={[
                             "first:rounded-t last:rounded-b md:hover:bg-gray-100 hover:text-link py-2 px-5 block whitespace-no-wrap",
                           ]}
                           href={href2}
-                          target="_blank"
+                          target={external2 ? "_blank" : undefined}
+                          rel={external2 ? "noopener noreferrer" : undefined}
                         >
                           {text2}
                         </a>
@@ -80,15 +87,16 @@ const {
                     "hover:text-link px-4 py-3 flex items-centers",
                   ]}
                   href={href}
-                  target="_blank"
+                  target={external ? "_blank" : undefined}
+                  rel={external ? "noopener noreferrer" : undefined}
                 >
-                  <Icon name={icon} class="w-5 h-5 mr-1 inline-block" />
+                  {icon && <Icon name={icon} class="w-5 h-5 mr-1 inline-block" />}
                   {text}
                 </a>
               )}
             </li>
           ))
-        }
+        }        
       </ul>
     </nav>
     <div class:list={[{ 'ml-auto': position === 'left' }, 'md:self-center flex items-center md:mb-0']}>

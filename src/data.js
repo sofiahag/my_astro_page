@@ -3,12 +3,14 @@ export const headerData = {
     {
       text: 'LinkedIn',
       href: 'https://www.linkedin.com/in/sofia-silverslott-6939a8160',
-      icon: 'mdi:linkedin'
+      icon: 'mdi:linkedin',
+      external: true
     },
     {
       text: 'GitHub',
       href: 'https://github.com/silverslott',
-      icon: 'mdi:github'
+      icon: 'mdi:github',
+      external: true
     },
     {
       text: 'Family',

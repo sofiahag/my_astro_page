@@ -1,7 +1,7 @@
 const CONFIG = {
-  name: 'Sofia Silverslott',
+  name: 'Sofia',
 
-  origin: 'https://www.silverslott.com', //'https://example.com'
+  origin: 'https://sofia-silver.netlify.app/', //'https://example.com'
   basePathname: '/', // Change this if you need to deploy to Github Pages, for example
   trailingSlash: false, // Generate permalinks with or without "/" at the end
 
